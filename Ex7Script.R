@@ -15,7 +15,7 @@ iris<-read.csv("iris.csv")
 
 #Print the last 2 rows and the last two columns to the R terminal
 T<-tail(iris[,4:5],2)
-print(T)
+print(as.data.frame(T),row.names=FALSE)
 
 #Get the number of observations for each species in the data set
 X<-sum(iris[,5]=="virginica")
