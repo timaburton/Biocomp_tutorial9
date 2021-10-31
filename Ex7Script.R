@@ -21,7 +21,7 @@ print(as.data.frame(T),row.names=FALSE)
 X<-sum(iris[,5]=="virginica")
 Y<-sum(iris[,5]=="setosa")
 Z<-sum(iris[,5]=="versicolor")
-cat(c("Virginica:", X, "Setosa:", Y, "Versicolor:", Z))
+data.frame(Species=c("Virginica:", "Setosa:", "Versicolor:"),Observations=c(X, Y, Z))
 
 #Get rows with Sepal.Width > 3.5
 sepal<-(iris[iris$Sepal.Width>3.5,])
