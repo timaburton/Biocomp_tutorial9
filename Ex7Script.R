@@ -27,7 +27,7 @@ data.frame(Species=c("Virginica:", "Setosa:", "Versicolor:"),Observations=c(X, Y
 sepal<-(iris[iris$Sepal.Width>3.5,])
 print(sepal)
 
-#Write the data for species setosa to a comma-deliminated file named 'setosa.csv'
+#Write the data for species setosa to a comma-delimited file named 'setosa.csv'
 setosa<-(iris[iris$Species=="setosa",])
 write.csv(setosa, 'setosa.csv')
 
@@ -36,7 +36,5 @@ df = iris
 Mean<-mean(df$Petal.Length)
 Min<-min(df$Petal.Length)
 Max<-max(df$Petal.Length)
-cat(c("Mean Petal Length:", Mean, 
-      "Minimum Petal Length:", Min, 
-      "Maximum Petal Length:", Max))
+data.frame(Measurement=c("Mean Petal Length", "Minimum Petal Length", "Maximum Petal Length"),Value=c(Mean,Min,Max))
 
