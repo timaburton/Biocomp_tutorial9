@@ -1,0 +1,50 @@
+---
+title: "Tutorial_7_Nicholls"
+author: "Sarah Nicholls"
+date: "10/29/2021"
+output: html_document
+---
+
+```{r packages}
+library(tidyverse)
+library(dplyr)
+```
+
+## Tutorial 7
+
+#Problem 1
+```{r head}
+Sarah_head_function <- function(df,n){
+    print(df[1:n,])
+}
+
+Sarah_head_function(iris,5)
+```
+
+#Problem 2
+
+
+```{r pressure, echo=FALSE}
+#1
+setwd("/Users/sarahnicholls/Desktop/Biocomp_tutorial9")
+iris <- read.csv("iris.csv")
+#2
+#last two rows
+print(tail(iris, n=2))
+#last two columns
+print(iris[(ncol(iris)-1):ncol(iris)])
+#3
+iris %>%
+  filter(Sepal.Width > 3.5)
+#4 
+setosa <- iris %>%
+  filter(Species == "setosa")
+write.csv(setosa,"setosa.csv")
+#5
+virginica <- iris %>%
+  filter(Species == "virginica")
+mean(virginica$Petal.Length)
+min(virginica$Petal.Length)
+max(virginica$Petal.Length)
+```
+
