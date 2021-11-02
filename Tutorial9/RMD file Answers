@@ -1,0 +1,30 @@
+library(tidyverse)
+library(dplyr)
+
+iris <- read_csv("iris.csv")
+
+##Question 1
+readLines('iris.csv', n=2)
+##Question 2
+#load data
+iris <- read.csv('iris.csv', header = TRUE, stringsAsFactors = FALSE)
+#look at data
+class(iris)
+str(iris)
+#print last 2 columns and rows 
+iris[149:150, 4:5]
+#number observations per species 
+iris %>% 
+  count(Species)
+#filter sepal width
+iris %>% 
+  filter(Sepal.Width > 3.5)
+#create csv with species- setosa
+write.csv(iris %>% 
+            filter(Species=="setosa"),
+         "setosa.csv")
+#calculate mean, min, and max for petal width of virginica 
+iris %>% 
+  filter(Species=="virginica") %>% 
+  summarise(mean=mean(Petal.Width), minimum=min(Petal.Width), 
+  maximum=max(Petal.Width))
