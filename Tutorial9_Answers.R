@@ -4,7 +4,6 @@
 
 #Set working directory 
 setwd("~/Desktop/Fall-2021/Biocomputing/Tutorial9/Biocomp_tutorial9")
-list.files()
 #Define a variable with the file to return lines from 
 exampleFile <- read.table("iris.csv",header=TRUE,sep=",")
 #Define variable representing the number of lines to be returned from the top of the file
@@ -28,9 +27,9 @@ sum(irisFile$Species=='virginica')
 irisFile[irisFile$Sepal.Width>3.5,]
 # Write the data for the species setosa to a comma-delimited file named 'setosa.csv'
 setosaData<-irisFile[irisFile$Species=='setosa',]
-write.csv(setosaData, file = 'setosa.csv',row.names=FALSE)
+write.csv(setosaData,file = 'setosa.csv',row.names=FALSE)
 # Calculate the mean, minimum, and maximum of Petal.Length for observations from virginica
 mean(irisFile$Petal.Length[irisFile$Species=='virginica'])
-min(irisFile$Petal.Length)
-max(irisFile$Petal.Length) #How to select rows that are specific to virginica
+min(irisFile$Petal.Length[irisFile$Species=='virginica'])
+max(irisFile$Petal.Length[irisFile$Species=='virginica']) 
 
