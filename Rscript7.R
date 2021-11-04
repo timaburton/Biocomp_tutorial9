@@ -9,7 +9,7 @@ data[1:lines,]
 data2=read.table(file="iris.csv",header=TRUE,sep=",")
 # print last 2 rows in last 2 columns
 lastrows<-tail(data2,n=2)
-lastrowsandcolumns<-lastrows[,3:4]
+lastrowsandcolumns<-lastrows[,4:5]
 # what is number of observations for each species?
 unique(data2$Species)
 sum(data2$Species=="setosa")
