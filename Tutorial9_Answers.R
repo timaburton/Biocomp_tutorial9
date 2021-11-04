@@ -6,7 +6,7 @@
 setwd("~/Desktop/Fall-2021/Biocomputing/Tutorial9/Biocomp_tutorial9")
 #Define a variable with the file to return lines from 
 exampleFile <- read.table("iris.csv",header=TRUE,sep=",")
-#Define variable representing the number of lines to be returned from the top of the file
+#Define variable representing the number of lines to be returned from the top of the file (can be any number)
 numLines = 8
 #Select certain number of lines from the top of the file (use square bracket indexing)
 results <- exampleFile[1:numLines, ]
