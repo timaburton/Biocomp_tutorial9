@@ -18,7 +18,6 @@ sum(data2$Species=="virginica")
 # get rows with Sepal.Width > 3.5
 sepalwidth<-data2[data2$Sepal.Width>3.5,]
 # write data for species setosa to comma-delimited file named "setosa.csv"
-# ***is this comma delimited??
 setosa=data2[data2$Species=="setosa",]
 write.table(x=setosa,file="setosa.csv",row.names=FALSE,col.names=TRUE,sep=",")
 # Calculate mean, minimum, and max of Petal.Length for obs from virginica
