@@ -2,8 +2,6 @@
 
 # Usage: $Rscript Q2.R 
 
-setwd("~/Desktop/r-novice-inflamation/R-project-for-class/Biocomp_tutorial9")
-
 #read the data
 table1 <- read.table(file="iris.csv",sep=",",header=TRUE,stringsAsFactors=TRUE)
 
