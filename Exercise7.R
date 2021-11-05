@@ -26,7 +26,7 @@ sum(sumspecies$Species=="setosa")
 
 #get rows with Sepal.Width > 3.5
 sw<-(iris[iris$Sepal.Width>3.5,])
-print(sw)
+sw
 
 #write the data for the species setosa to a comma-delimited file names ‘setosa.csv’
 setosa<-subset(iris, Species=="setosa")
