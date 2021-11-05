@@ -6,11 +6,11 @@
 # Output: specific row contents of the file
 # Usage: $Rscript Q1.R iris.csv 5
 
-# Print commands to terminal in R
+# return parameters from terminal to Args
 Args <- commandArgs()
-# variable 6 is the first parameter
+# Args 6 is the first parameter
 filename <- Args[6]
-# variable 7 is the second parameter
+# Args 7 is the second parameter
 num <- Args[7]
 
 #read the table 
